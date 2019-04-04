@@ -1,0 +1,6 @@
+rs#	alleles	chrom	pos	REFERENCE_GENOME	Parent_A	Parent_A	Parent_A	Parent_B	Parent_B	Parent_B	S1	S2	S3
+S8_5578	C/T	chr52	5578	C	T	T	T	C	C	C	T	C	T
+S8_5579	C/T	chr52	5579	C	T	T	A	C	C	C	T	C	N
+S8_5580	C/T	chr52	5580	C	A	T	C	C	C	C	T	C	N
+S8_5581	C/T	chr52	5581	C	A	T	T	C	C	C	N	T	A
+S8_5582	C/T	chr52	5582	C	T	T	T	A	T	C	T	T	N
