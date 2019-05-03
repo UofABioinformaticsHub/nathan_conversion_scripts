@@ -35,13 +35,13 @@ while(<>) {
   $tp_bases{$_}++ for @columns[($first_genotype_col-1) .. $#columns];
 
   if ($columns[$parentA_col-1] =~ /[^ACTG]/) {
-    print STDERR "Parent A is not homozygous for the following TagPair: $columns[0] $columns[$parentA_col-1] $columns[$parentB_col-1]\n";
+    print STDERR "Parent A is not homozygous for the following marker: $columns[0] $columns[$parentA_col-1] $columns[$parentB_col-1]\n";
     next;
   } elsif ($columns[$parentB_col-1] =~ /[^ACTG]/) {
-    print STDERR "Parent B is not homozygous for the following TagPair: $columns[0] $columns[$parentA_col-1] $columns[$parentB_col-1]\n";
+    print STDERR "Parent B is not homozygous for the following marker: $columns[0] $columns[$parentA_col-1] $columns[$parentB_col-1]\n";
     next;
   } elsif ($columns[$parentA_col-1] eq $columns[$parentB_col-1]) {
-    print STDERR "Parent genotypes are the same for the following TagPair: $columns[0] $columns[$parentA_col-1] $columns[$parentB_col-1]\n";
+    print STDERR "Parent genotypes are the same for the following marker: $columns[0] $columns[$parentA_col-1] $columns[$parentB_col-1]\n";
     next;
   }
   
