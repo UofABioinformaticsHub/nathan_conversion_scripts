@@ -73,8 +73,12 @@ NR>1 {
             break
           }
         }
-        printf "%s\t", b_maj
-        continue
+        if(i==NF) {
+          printf "%s\n", b_maj
+        } else {
+          printf "%s\t", b_maj
+          continue
+        }
       }
       continue
     }
