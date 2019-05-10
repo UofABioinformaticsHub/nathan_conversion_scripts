@@ -47,12 +47,11 @@ NR>1 {
 
   for(i=1; i<=NF; i++) {
     if(i>=a_from && i<=a_to) {
-      if($i~/^[N]$/){
-        continue
+      if($i!~/^[N]$/){
+        # We are in one of the group A columns, store the call
+        a_calls[$i]++
+        num_a_calls++
       }
-      # We are in one of the group A columns, store the call
-      a_calls[$i]++
-      num_a_calls++
 
       if(i==a_to) {
         # got to last col of group A, so calculate and output the majority rule
@@ -68,12 +67,11 @@ NR>1 {
       }
       continue
     } else if(i>=b_from && i<=b_to) {
-      if($i~/^[N]$/) {
-        continue
+      if($i!~/^[N]$/) {
+        # We are in one of the group B columns, store the call
+        b_calls[$i]++
+        num_b_calls++
       }
-      # We are in one of the group B columns, store the call
-      b_calls[$i]++
-      num_b_calls++
 
       if(i==b_to) {
         # got to last col of group B, so calculate and output the majority rule
